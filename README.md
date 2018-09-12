@@ -1,0 +1,2 @@
+# sshDemo
+Hibernate和Spring以及SpringMVC整合的一个demo
