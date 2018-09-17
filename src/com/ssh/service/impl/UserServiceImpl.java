@@ -11,9 +11,16 @@ import com.ssh.dao.UserDao;
 import com.ssh.entity.User;
 import com.ssh.service.UserService;
 @Service("userServiceImpl")
+@Transactional
 public class UserServiceImpl implements UserService{
 	@Resource(name = "userDaoImpl")
 	UserDao userDao;
+	
+	@Override
+	public User findUserByName(String username) throws Exception {
+		return userDao.findUserByName(username);
+	}
+
 	@Override
 	public User findUserById(Integer id) throws Exception {
 		
